@@ -31,7 +31,7 @@ AWS uses this key pair to authenticate you.
 AWS asks you to create or select a key pair\
 You download a .pem file\
 AWS injects the public key into the instance\
-AWS gives the .pem file only once\
+AWS gives the .pem file only once
 
 
 
@@ -51,7 +51,7 @@ Its good to maintain one separate SG for SSH access\
 If your application is not accessible ,then its security group issue.\
 If your application gives a "connection refused" error,then its an application issue or its not launched\
 All inbound traffic is bloced by default\
-All outbound traffic is authorised by default\\
+All outbound traffic is authorised by default
 
 **VPC (Virtual Private Cloud) is your own private network inside AWS**.\\
 
@@ -61,7 +61,7 @@ IP address range\
 Subnets\
 Routing\
 Internet access\
-Security rules\
+Security rules
 
 **----Public VPC-----**\\
 A VPC where all subnets are public.
@@ -72,7 +72,7 @@ All instances can access the internet directly\\
 Use case:\
 Simple websites\
 Non-sensitive workloads\
-Not ideal for databases or secure apps\
+Not ideal for databases or secure apps
 
 **----Private VPC----**
 A VPC with only private subnets.
@@ -92,7 +92,7 @@ Subnet-2: 10.0.2.0/24\
 
 A subnet exists in only ONE Availability Zone (AZ)\
 VPC can span multiple AZs\
-This helps with high availability\
+This helps with high availability
 
 **---VPC with Public & Private Subnets (Most Common)---***
 
@@ -103,55 +103,55 @@ Private subnet → App servers, Databases\
 NAT Gateway for outbound internet\
 Use case:
 Web applications\
-Enterprise systems\
+Enterprise systems
 
 
-**Step 1**: Login to AWS Console.
-Go to AWS Management Console → sign in.
-**Step 2**: Open EC2 Service.
-Search EC2.
-Click EC2 → Instances.
-Click Launch instance.
-**Step 3**: Name your VM.
+**Step 1**: Login to AWS Console/
+Go to AWS Management Console → sign in
+**Step 2**: Open EC2 Service\
+Search EC2\
+Click EC2 → Instances\
+Click Launch instance
+**Step 3**: Name your VM\
 Example:
-My-First-VM.
-**Step 4**: Choose an AMI (Operating System).
+My-First-VM
+**Step 4**: Choose an AMI (Operating System)\
 Common choices:
-Amazon Linux (best for beginners).
-Ubuntu.
-Windows Server.
-Select one and continue.
-**Step 5**: Choose Instance Type.
+Amazon Linux (best for beginners)\
+Ubuntu\
+Windows Server\
+Select one and continue
+**Step 5**: Choose Instance Type\
 For free tier:
-t2.micro or t3.micro.
-(1 vCPU, 1 GB RAM).
-**Step 6**: Create / Select Key Pair (VERY IMPORTANT).
-This is for SSH login.
-Click Create new key pair.
-Name it (e.g. mykey).
-Download .pem file.
-Download only once — keep it safe.
-**Step 7**: Network Settings.
-VPC: Default (for beginners).
-Subnet: Any.
-Auto-assign Public IP: Enable.
+t2.micro or t3.micro\
+(1 vCPU, 1 GB RAM)
+**Step 6**: Create / Select Key Pair (VERY IMPORTANT)\
+This is for SSH login\
+Click Create new key pair\
+Name it (e.g. mykey)\
+Download .pem file\
+Download only once — keep it safe
+**Step 7**: Network Settings\
+VPC: Default (for beginners)\
+Subnet: Any\
+Auto-assign Public IP: Enable\
 Firewall (Security Group):
-Allow SSH (22) → My IP.
-Allow HTTP (80) if needed.
-**Step 8**: Storage.
-Default is fine:
-8 GB gp3.
-**Step 9**: Launch Instance.
-Click Launch instance.
-   VM is created.
-**Step 10**: Connect to the VM (Linux).
+Allow SSH (22) → My IP\
+Allow HTTP (80) if needed
+**Step 8**: Storage\
+Default is fine\
+8 GB gp3
+**Step 9**: Launch Instance\
+Click Launch instance\
+   VM is created
+**Step 10**: Connect to the VM (Linux)\
 On Linux / macOS / Git Bash:
-chmod 400 mykey.pem.
-ssh -i mykey.pem ec2-user@<public-ip>.
+chmod 400 mykey.pem\
+ssh -i mykey.pem ec2-user@<public-ip>\
 Ubuntu:
-ssh -i mykey.pem ubuntu@<public-ip>.
+ssh -i mykey.pem ubuntu@<public-ip>\
 
-<img width="1415" height="572" alt="image" src="https://github.com/user-attachments/assets/d172c7e2-66be-41b6-85b4-d63799a75242" />.
+<img width="1415" height="572" alt="image" src="https://github.com/user-attachments/assets/d172c7e2-66be-41b6-85b4-d63799a75242" />
 
 <img width="1508" height="705" alt="image" src="https://github.com/user-attachments/assets/f1da8fed-df9e-4d97-a5cb-3aefde0a6b13" />
 
