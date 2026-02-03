@@ -163,8 +163,7 @@ ssh -i mykey.pem ubuntu@<public-ip>\
 Folder structure\
 terraform-vm/\
  ├── main.tf\
- ├── variables.tf\
- └── outputs.tf\
+ 
 
 Steps to Run Terraform\
 **Step 1**: Configure AWS credentials\
