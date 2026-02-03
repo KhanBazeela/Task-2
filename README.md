@@ -1,14 +1,14 @@
 # Task-2
-**HOW TO LAUNCH VM USING TERRAFORM AND AWS CLOUD**
+**HOW TO LAUNCH VM USING TERRAFORM AND AWS CLOUD**\
 
-**AWS DOCUMENT**
+**AWS DOCUMENT**\
 
-**EC2(Elastic compute cloud)**:
-Mainly consists of 
-1-Renting VM
-2-Storing data on virtual drives(EBS)
-3-Distributing load across machine (ELB)
-4- Scaling the services using an auto-scaling group(ASG)
+**EC2(Elastic compute cloud)**:\
+Mainly consists of \
+1-Renting VM\
+2-Storing data on virtual drives(EBS)\
+3-Distributing load across machine (ELB)\
+4- Scaling the services using an auto-scaling group(ASG)\
 
 **EC2 sizing and configuration options**:
 Operating system
