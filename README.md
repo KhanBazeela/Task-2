@@ -63,24 +63,24 @@ Routing\
 Internet access\
 Security rules
 
-**----Public VPC-----**
+**----Public VPC-----** \\
 A VPC where all subnets are public.
 Features:\
 Internet Gateway attached\
-All instances can access the internet directly\
+All instances can access the internet directly
 
 Use case:\
 Simple websites\
 Non-sensitive workloads\
 Not ideal for databases or secure apps
 
-**----Private VPC----**
+**----Private VPC----** \\
 A VPC with only private subnets.
 Features:\
 No direct internet access\
 Access via VPN / Direct Connect only\
 Use case:\
-Internal applications\
+Internal applications
 
 Highly secure environments\
 A subnet is a smaller network inside a VPC.
