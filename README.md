@@ -63,11 +63,11 @@ Routing\
 Internet access\
 Security rules
 
-**----Public VPC-----**\\
+**----Public VPC-----**
 A VPC where all subnets are public.
 Features:\
 Internet Gateway attached\
-All instances can access the internet directly\\
+All instances can access the internet directly\
 
 Use case:\
 Simple websites\
