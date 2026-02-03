@@ -1,7 +1,7 @@
 # Task-2
-**HOW TO LAUNCH VM USING TERRAFORM AND AWS CLOUD**\
+**HOW TO LAUNCH VM USING TERRAFORM AND AWS CLOUD**
 
-**AWS DOCUMENT**\
+**AWS DOCUMENT**
 
 **EC2(Elastic compute cloud)**:\
 Mainly consists of \
@@ -10,69 +10,69 @@ Mainly consists of \
 3-Distributing load across machine (ELB)\
 4- Scaling the services using an auto-scaling group(ASG)\
 
-**EC2 sizing and configuration options**:
-Operating system
-Compute power unit
-RAM
-Storage space(Network attached(EBS and EFS)
-              (Hardware attached(EC2 instance and store)
-Network card: Speed of the card and Public ip address
-Firewall rules: Security group
-Bootstrap script.
+**EC2 sizing and configuration options**:\
+Operating system\
+Compute power unit\
+RAM\
+Storage space(Network attached(EBS and EFS)\
+              (Hardware attached(EC2 instance and store)\
+Network card: Speed of the card and Public ip address\
+Firewall rules: Security group\
+Bootstrap script.\
 
-**SSH keys are used to securely log in to your EC2 instance without passwords**.
+**SSH keys are used to securely log in to your EC2 instance without passwords**.\
 
-They come in a pair:
-Private key (.pem) → stays on your laptop (never share this)
-Public key → stored on the EC2 instance
-AWS uses this key pair to authenticate you.
+They come in a pair:\
+Private key (.pem) → stays on your laptop (never share this)\
+Public key → stored on the EC2 instance\
+AWS uses this key pair to authenticate you.\\
 
-**Option 1**: During EC2 launch (most common)
-AWS asks you to create or select a key pair
-You download a .pem file
-AWS injects the public key into the instance
-AWS gives the .pem file only once
+**Option 1**: During EC2 launch (most common)\
+AWS asks you to create or select a key pair\
+You download a .pem file\
+AWS injects the public key into the instance\
+AWS gives the .pem file only once\\\
 
 
 
-**Security groups**:
-SGs are fundamental of network security in AWS
-These act as firewall and regulate :
-Access to ports 
-Authorised IP Ranges-IPV4 and IPV6 
-Control of inbound network
-Control of outbound network.
+**Security groups**:\
+SGs are fundamental of network security in AWS\
+These act as firewall and regulate :\
+Access to ports \
+Authorised IP Ranges-IPV4 and IPV6\ 
+Control of inbound network\
+Control of outbound network.\\
 
-Security groups:
-Can be attached to multiple instances
-locked down to a region/VPC combination
-does live "outside" the EC2 -if traffic is blocked ,the EC2 instance won't see it
-Its good to maintain one separate SG for SSH access
-If your application is not accessible ,then its security group issue.
-If your application gives a "connection refused" error,then its an application issue or its not launched
-All inbound traffic is bloced by default
-All outbound traffic is authorised by default
+Security groups:\
+Can be attached to multiple instances\
+locked down to a region/VPC combination\
+does live "outside" the EC2 -if traffic is blocked ,the EC2 instance won't see it\
+Its good to maintain one separate SG for SSH access\
+If your application is not accessible ,then its security group issue.\
+If your application gives a "connection refused" error,then its an application issue or its not launched\
+All inbound traffic is bloced by default\
+All outbound traffic is authorised by default\\
 
-**VPC (Virtual Private Cloud) is your own private network inside AWS**.
+**VPC (Virtual Private Cloud) is your own private network inside AWS**.\\
 
-A virtual data center network that only you control.
-You decide:
-IP address range
-Subnets
-Routing
-Internet access
-Security rules
+A virtual data center network that only you control.\
+You decide:\
+IP address range\
+Subnets\
+Routing\
+Internet access\
+Security rules\
 
-**----Public VPC-----**
-A VPC where all subnets are public.
-Features:
-Internet Gateway attached
-All instances can access the internet directly
+**----Public VPC-----**\\
+A VPC where all subnets are public.\\
+Features:\
+Internet Gateway attached\
+All instances can access the internet directly\\
 
-Use case:
-Simple websites
-Non-sensitive workloads
-Not ideal for databases or secure apps
+Use case:\
+Simple websites\
+Non-sensitive workloads\
+Not ideal for databases or secure apps\
 
 **----Private VPC----**
 A VPC with only private subnets.
