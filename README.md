@@ -18,14 +18,14 @@ Storage space(Network attached(EBS and EFS)\
               (Hardware attached(EC2 instance and store)\
 Network card: Speed of the card and Public ip address\
 Firewall rules: Security group\
-Bootstrap script.\
+Bootstrap script.
 
-**SSH keys are used to securely log in to your EC2 instance without passwords**.\
+**SSH keys are used to securely log in to your EC2 instance without passwords**.
 
 They come in a pair:\
 Private key (.pem) → stays on your laptop (never share this)\
 Public key → stored on the EC2 instance\
-AWS uses this key pair to authenticate you.\\
+AWS uses this key pair to authenticate you.
 
 **Option 1**: During EC2 launch (most common)\
 AWS asks you to create or select a key pair\
@@ -41,7 +41,7 @@ These act as firewall and regulate :\
 Access to ports \
 Authorised IP Ranges-IPV4 and IPV6\ 
 Control of inbound network\
-Control of outbound network.\\
+Control of outbound network.
 
 Security groups:\
 Can be attached to multiple instances\
@@ -55,7 +55,7 @@ All outbound traffic is authorised by default\\
 
 **VPC (Virtual Private Cloud) is your own private network inside AWS**.\\
 
-A virtual data center network that only you control.\
+A virtual data center network that only you control.
 You decide:\
 IP address range\
 Subnets\
@@ -64,7 +64,7 @@ Internet access\
 Security rules\
 
 **----Public VPC-----**\\
-A VPC where all subnets are public.\\
+A VPC where all subnets are public.
 Features:\
 Internet Gateway attached\
 All instances can access the internet directly\\
@@ -76,34 +76,34 @@ Not ideal for databases or secure apps\
 
 **----Private VPC----**
 A VPC with only private subnets.
-Features:
-No direct internet access
-Access via VPN / Direct Connect only
-Use case:
-Internal applications
+Features:\
+No direct internet access\
+Access via VPN / Direct Connect only\
+Use case:\
+Internal applications\
 
-Highly secure environments
+Highly secure environments\
 A subnet is a smaller network inside a VPC.
 It divides your VPC into logical sections.
 Example:
-VPC:      10.0.0.0/16
-Subnet-1: 10.0.1.0/24
-Subnet-2: 10.0.2.0/24
+VPC:      10.0.0.0/16\
+Subnet-1: 10.0.1.0/24\
+Subnet-2: 10.0.2.0/24\
 
-A subnet exists in only ONE Availability Zone (AZ)
-VPC can span multiple AZs
-This helps with high availability
+A subnet exists in only ONE Availability Zone (AZ)\
+VPC can span multiple AZs\
+This helps with high availability\
 
 **---VPC with Public & Private Subnets (Most Common)---***
 
 This is the real-world standard design.
 Architecture:
-Public subnet → Load balancer, Bastion
-Private subnet → App servers, Databases
-NAT Gateway for outbound internet
+Public subnet → Load balancer, Bastion\
+Private subnet → App servers, Databases\
+NAT Gateway for outbound internet\
 Use case:
-Web applications
-Enterprise systems
+Web applications\
+Enterprise systems\
 
 
 **Step 1**: Login to AWS Console
