@@ -8,7 +8,7 @@ Mainly consists of \
 1-Renting VM\
 2-Storing data on virtual drives(EBS)\
 3-Distributing load across machine (ELB)\
-4- Scaling the services using an auto-scaling group(ASG)\
+4- Scaling the services using an auto-scaling group(ASG)
 
 **EC2 sizing and configuration options**:\
 Operating system\
@@ -31,7 +31,7 @@ AWS uses this key pair to authenticate you.
 AWS asks you to create or select a key pair\
 You download a .pem file\
 AWS injects the public key into the instance\
-AWS gives the .pem file only once\\\
+AWS gives the .pem file only once\
 
 
 
@@ -39,7 +39,7 @@ AWS gives the .pem file only once\\\
 SGs are fundamental of network security in AWS\
 These act as firewall and regulate :\
 Access to ports \
-Authorised IP Ranges-IPV4 and IPV6\ 
+Authorised IP Ranges-IPV4 and IPV6.
 Control of inbound network\
 Control of outbound network.
 
@@ -106,52 +106,52 @@ Web applications\
 Enterprise systems\
 
 
-**Step 1**: Login to AWS Console
+**Step 1**: Login to AWS Console.
 Go to AWS Management Console → sign in.
-**Step 2**: Open EC2 Service
-Search EC2
-Click EC2 → Instances
-Click Launch instance
-**Step 3**: Name your VM
+**Step 2**: Open EC2 Service.
+Search EC2.
+Click EC2 → Instances.
+Click Launch instance.
+**Step 3**: Name your VM.
 Example:
-My-First-VM
-**Step 4**: Choose an AMI (Operating System)
+My-First-VM.
+**Step 4**: Choose an AMI (Operating System).
 Common choices:
-Amazon Linux (best for beginners)
-Ubuntu
-Windows Server
-Select one and continue
-**Step 5**: Choose Instance Type
+Amazon Linux (best for beginners).
+Ubuntu.
+Windows Server.
+Select one and continue.
+**Step 5**: Choose Instance Type.
 For free tier:
-t2.micro or t3.micro
-(1 vCPU, 1 GB RAM)
-**Step 6**: Create / Select Key Pair (VERY IMPORTANT)
+t2.micro or t3.micro.
+(1 vCPU, 1 GB RAM).
+**Step 6**: Create / Select Key Pair (VERY IMPORTANT).
 This is for SSH login.
-Click Create new key pair
-Name it (e.g. mykey)
-Download .pem file
-Download only once — keep it safe
-**Step 7**: Network Settings
-VPC: Default (for beginners)
-Subnet: Any
-Auto-assign Public IP: Enable
+Click Create new key pair.
+Name it (e.g. mykey).
+Download .pem file.
+Download only once — keep it safe.
+**Step 7**: Network Settings.
+VPC: Default (for beginners).
+Subnet: Any.
+Auto-assign Public IP: Enable.
 Firewall (Security Group):
-Allow SSH (22) → My IP
-Allow HTTP (80) if needed
-**Step 8**: Storage
+Allow SSH (22) → My IP.
+Allow HTTP (80) if needed.
+**Step 8**: Storage.
 Default is fine:
-8 GB gp3
-**Step 9**: Launch Instance
-Click Launch instance
-   VM is created
-**Step 10**: Connect to the VM (Linux)
+8 GB gp3.
+**Step 9**: Launch Instance.
+Click Launch instance.
+   VM is created.
+**Step 10**: Connect to the VM (Linux).
 On Linux / macOS / Git Bash:
-chmod 400 mykey.pem
-ssh -i mykey.pem ec2-user@<public-ip>
+chmod 400 mykey.pem.
+ssh -i mykey.pem ec2-user@<public-ip>.
 Ubuntu:
-ssh -i mykey.pem ubuntu@<public-ip>
+ssh -i mykey.pem ubuntu@<public-ip>.
 
-<img width="1415" height="572" alt="image" src="https://github.com/user-attachments/assets/d172c7e2-66be-41b6-85b4-d63799a75242" />
+<img width="1415" height="572" alt="image" src="https://github.com/user-attachments/assets/d172c7e2-66be-41b6-85b4-d63799a75242" />.
 
 <img width="1508" height="705" alt="image" src="https://github.com/user-attachments/assets/f1da8fed-df9e-4d97-a5cb-3aefde0a6b13" />
 
