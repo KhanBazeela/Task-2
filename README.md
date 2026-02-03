@@ -63,7 +63,8 @@ Routing\
 Internet access\
 Security rules
 
-**----Public VPC-----** \\
+**----Public VPC-----** 
+
 A VPC where all subnets are public.
 Features:\
 Internet Gateway attached\
@@ -74,7 +75,8 @@ Simple websites\
 Non-sensitive workloads\
 Not ideal for databases or secure apps
 
-**----Private VPC----** \\
+**----Private VPC----** 
+
 A VPC with only private subnets.
 Features:\
 No direct internet access\
@@ -88,7 +90,7 @@ It divides your VPC into logical sections.
 Example:
 VPC:      10.0.0.0/16\
 Subnet-1: 10.0.1.0/24\
-Subnet-2: 10.0.2.0/24\
+Subnet-2: 10.0.2.0/24
 
 A subnet exists in only ONE Availability Zone (AZ)\
 VPC can span multiple AZs\
@@ -156,23 +158,31 @@ ssh -i mykey.pem ubuntu@<public-ip>\
 <img width="1508" height="705" alt="image" src="https://github.com/user-attachments/assets/f1da8fed-df9e-4d97-a5cb-3aefde0a6b13" />
 
 **TERRAFORM**
-Folder structure
-terraform-vm/
- ├── main.tf
- ├── variables.tf
- └── outputs.tf
 
-Steps to Run Terraform
-Step 1: Configure AWS credentials
-aws configure
-Step 2: Initialize Terraform
-terraform init
-Step 3: Preview resources
-terraform plan
-Step 4: Create VM
-terraform apply
-Type yes
-Connect to the VM
-ssh ec2-user@<public-ip>
-(Private key is already in ~/.ssh/id_rsa)
 
+Folder structure\
+terraform-vm/\
+ ├── main.tf\
+ ├── variables.tf\
+ └── outputs.tf\
+
+Steps to Run Terraform\
+**Step 1**: Configure AWS credentials\
+aws configure\
+**Step 2**: Initialize Terraform\
+terraform init\
+**Step 3**: Preview resources\
+terraform plan\
+**Step 4**: Create VM\
+terraform apply\
+Type yes\
+Connect to the VM\
+ssh ec2-user@<public-ip>\
+(Private key is already in ~/.ssh/id_rsa)\
+
+After these commands our instance will be created and start running.
+
+**Conclusion**
+
+In this task we learned about AWS Instances and how to setup it manually and as in Infrastrusture as Code with the help of Terraform\
+We learned that doing with the help of Terraform makes it easier and faster while manually it takes time.
