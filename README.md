@@ -107,48 +107,48 @@ Enterprise systems
 
 
 **Step 1**: Login to AWS Console/
-Go to AWS Management Console → sign in
+Go to AWS Management Console → sign in\
 **Step 2**: Open EC2 Service\
 Search EC2\
 Click EC2 → Instances\
-Click Launch instance
+Click Launch instance\
 **Step 3**: Name your VM\
-Example:
-My-First-VM
+Example:\
+My-First-VM\
 **Step 4**: Choose an AMI (Operating System)\
-Common choices:
+Common choices:\
 Amazon Linux (best for beginners)\
 Ubuntu\
 Windows Server\
-Select one and continue
+Select one and continue\
 **Step 5**: Choose Instance Type\
-For free tier:
+For free tier:\
 t2.micro or t3.micro\
-(1 vCPU, 1 GB RAM)
+(1 vCPU, 1 GB RAM)\
 **Step 6**: Create / Select Key Pair (VERY IMPORTANT)\
 This is for SSH login\
 Click Create new key pair\
 Name it (e.g. mykey)\
 Download .pem file\
-Download only once — keep it safe
+Download only once — keep it safe\
 **Step 7**: Network Settings\
 VPC: Default (for beginners)\
 Subnet: Any\
 Auto-assign Public IP: Enable\
-Firewall (Security Group):
+Firewall (Security Group):\
 Allow SSH (22) → My IP\
-Allow HTTP (80) if needed
+Allow HTTP (80) if needed\
 **Step 8**: Storage\
 Default is fine\
-8 GB gp3
+8 GB gp3\
 **Step 9**: Launch Instance\
 Click Launch instance\
-   VM is created
+   VM is created\
 **Step 10**: Connect to the VM (Linux)\
-On Linux / macOS / Git Bash:
+On Linux / macOS / Git Bash:\
 chmod 400 mykey.pem\
 ssh -i mykey.pem ec2-user@<public-ip>\
-Ubuntu:
+Ubuntu:\
 ssh -i mykey.pem ubuntu@<public-ip>\
 
 <img width="1415" height="572" alt="image" src="https://github.com/user-attachments/assets/d172c7e2-66be-41b6-85b4-d63799a75242" />
