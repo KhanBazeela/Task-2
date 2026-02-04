@@ -162,7 +162,7 @@ ssh -i mykey.pem ubuntu@<public-ip>\
 
 Folder structure\
 terraform-vm/\
- ├── main.tf\
+ ├── main.tf\ -->do remember while writing main in vscode use pluggins of terraform that will make your task easy of coding
  
 
 Steps to Run Terraform\
