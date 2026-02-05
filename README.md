@@ -164,7 +164,7 @@ Folder structure\
 terraform-vm/\
  ├── main.tf\ -->do remember while writing main in vscode use pluggins of terraform that will make your task easy of coding
  
-
+BEFORE USING TERRAFORM INSTALL EXTENSIONS(2)
 Steps to Run Terraform\
 **Step 1**: Configure AWS credentials\
 aws configure\
